@@ -128,6 +128,3 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES = [os.path.join(BASE_DIR, 'static')]
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static', 'media')
-
-STRIPE_PUBLISHABLE_KEY = 'pk_test_X3JHiYK47rPuBTJH48qID5oa'
-STRIPE_SECRET_KEY = 'sk_test_ISlZ3wwO0EcoLAin5TTRc6aW'
