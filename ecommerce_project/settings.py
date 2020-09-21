@@ -11,7 +11,14 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 import os
 from pathlib import Path
+from dotenv import load_dotenv
+load_dotenv()
 
+"""
+from django.core.management import utils
+used to generate django secret key
+SECRET_KEY = utils.get_random_secret_key()
+"""
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -20,7 +27,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'u8=8n387xcm@*wx!fmj#5s0hzj_x3%su!pdpoxg=0t!9^c+r13'
+
+# Keep it secret.. set env on herokuapp with name 'KEY'
+SECRET_KEY = os.environ['KEY']
+# SECRET_KEY =
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -128,3 +138,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES = [os.path.join(BASE_DIR, 'static')]
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static', 'media')
+
+
+# 'pk_test_RiCM8suKDhl1Tac3OiO7ju9e00kWlpjqmj'
+STRIPE_PUBLISHABLE_KEY = os.environ['STRIPE_PUBLISHABLE_KEY']
+# 'sk_test_6qdkdMkRzEXFBw9jxQYkELJ700lXCSSYJ4'
+STRIPE_SECRET_KEY = o.environ['STRIPE_SECRET_KEY']
