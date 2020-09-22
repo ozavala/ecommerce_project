@@ -20,7 +20,7 @@
           Welcome, {{ request.user.first_name }} <i class="fas fa-user circle"></i>
         </a>
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="">Order History</a>
+          <a class="dropdown-item" href="{% url 'order_history' %}">Order History</a>
 
         </div>
       </li>
