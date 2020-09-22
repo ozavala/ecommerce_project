@@ -8,6 +8,9 @@ from .forms import SignUpForm
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.decorators import login_required
+from django.core.paginator import Paginator, EmptyPage, InvalidPage
+from django.template.loader import get_template
+from django.core.mail import EmailMessage
 
 
 def home(request, category_slug=None):
@@ -233,3 +236,59 @@ def viewOrder(request, order_id):
         order = Order.objects.get(id=order_id, emailAddress=email)
         order_items = OrderItem.objects.filter(order=order)
     return render(request, 'order_detail.html', {'order': order, 'order_items': order_items})
+
+
+def search(request):
+    products = Product.objects.filter(name__contains=request.GET['name'])
+    return render(request, 'home.html', {'products': products})
+
+
+"""
+def sendEmail(order_id):
+    transaction = Order.objects.get(id=order_id)
+    order_items = OrderItem.objects.filter(order=transaction)
+
+    try:
+        subject = "ZStore - New Order #{}".format(transaction.id)
+        to = ['{}'.format(transaction.emailAddress)]
+        from_email = "orders@zero2launch.com"
+        order_information = {
+            'transaction': transaction,
+            'order_items': order_items
+        }
+        message = get_template('email/email.html').render(order_information)
+        msg = EmailMessage(subject, message, to=to, from_email=from_email)
+        msg.content_subtype = 'html'
+        msg.send()
+    except IOError as e:
+        return e
+
+
+def contact(request):
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            subject = form.cleaned_data.get('subject')
+            from_email = form.cleaned_data.get('from_email')
+            message = form.cleaned_data.get('message')
+            name = form.cleaned_data.get('name')
+
+            message_format = "{0} has sent you a new message:\n\n{1}".format(
+                name, message)
+
+            msg = EmailMessage(
+                subject,
+                message_format,
+                to=['contact@zero2launch.io'],
+                from_email=from_email
+            )
+
+            msg.send()
+
+            return render(request, 'contact_success.html')
+
+    else:
+        form = ContactForm()
+
+    return render(request, 'contact.html', {'form': form})
+"""
