@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-23 15:31-0500\n"
+"POT-Creation-Date: 2020-09-23 16:30-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -35,8 +35,10 @@ msgid "here"
 msgstr "aquí"
 
 #: store/templates/cart.html:17
-msgid "para continuar comprando"
-msgstr ""
+#, fuzzy
+#| msgid "Continue shopping"
+msgid "to continue shopping"
+msgstr "Continúe comprando"
 
 #: store/templates/cart.html:26
 msgid "Your  shopping cart"
@@ -70,9 +72,30 @@ msgstr "Por favor revise los artículos del carro ante de proceder al pago"
 msgid "Your total is: $"
 msgstr "El total es: $"
 
-#: store/templates/cart.html:112
+#: store/templates/cart.html:112 store/templates/orders_list.html:41
+#: store/templates/signup.html:44
 msgid "Continue shopping"
 msgstr "Continúe comprando"
+
+#: store/templates/contact.html:6
+msgid "CONTACT"
+msgstr "CONTACTO"
+
+#: store/templates/contact.html:19 store/templates/navbar.html:20
+msgid "Contact"
+msgstr "Contacto"
+
+#: store/templates/contact.html:20
+msgid "We will gladly support you"
+msgstr "Con mucho gusto, estamos para asesorarlo"
+
+#: store/templates/contact_success.html:13
+msgid "Thanks for contacting us!"
+msgstr "Gracias por contactarnos"
+
+#: store/templates/contact_success.html:18
+msgid "Your message has been successfully sent to the store owner"
+msgstr "Su mensaje ha sido enviado exitosamente al propietario de la tienda"
 
 #: store/templates/home.html:6
 msgid "Home"
@@ -90,10 +113,6 @@ msgstr "Categorías"
 msgid "All Products"
 msgstr "Celulares"
 
-#: store/templates/navbar.html:20
-msgid "Contact"
-msgstr "Contacto"
-
 #: store/templates/navbar.html:21
 msgid "About"
 msgstr "Acerca"
@@ -102,7 +121,8 @@ msgstr "Acerca"
 msgid "Welcome,"
 msgstr "Bienvenido,"
 
-#: store/templates/navbar.html:28
+#: store/templates/navbar.html:28 store/templates/orders_list.html:5
+#: store/templates/orders_list.html:12
 msgid "Order History"
 msgstr "Historia de Ordenes"
 
@@ -110,7 +130,7 @@ msgstr "Historia de Ordenes"
 msgid "Sign Out"
 msgstr "Salir"
 
-#: store/templates/navbar.html:40
+#: store/templates/navbar.html:40 store/templates/signup.html:25
 msgid "Sign Up"
 msgstr "Registrarse"
 
@@ -124,15 +144,119 @@ msgstr "Entrar"
 msgid "Search"
 msgstr "Búsqueda"
 
+#: store/templates/order_detail.html:4 store/templates/order_detail.html:12
+#, fuzzy
+#| msgid "Order History"
+msgid "Order Details"
+msgstr "Detalle de la Orden"
+
+#: store/templates/order_detail.html:18
+msgid "Order:"
+msgstr "Orden:"
+
+#: store/templates/order_detail.html:19
+msgid "Date:"
+msgstr "Fecha:"
+
+#: store/templates/order_detail.html:20
+msgid "Order Total:"
+msgstr "Total de la Orden"
+
+#: store/templates/order_detail.html:21
+msgid "Order Status:"
+msgstr "Estado de la Orden"
+
+#: store/templates/order_detail.html:21
+msgid "Complete."
+msgstr "Completa"
+
+#: store/templates/order_detail.html:24
+msgid "Billing Address:"
+msgstr "Dirr¿ección de Cobro"
+
+#: store/templates/order_detail.html:33 store/templates/product.html:20
+msgid "Product Description"
+msgstr "Decripción del Producto"
+
+#: store/templates/order_detail.html:34
+#, fuzzy
+#| msgid "Qty:"
+msgid "Qty"
+msgstr "Cantidad"
+
+#: store/templates/order_detail.html:35
+#, fuzzy
+#| msgid "Unit Price: $"
+msgid "Unit Price"
+msgstr "Precio Unitario: $"
+
+#: store/templates/order_detail.html:36
+msgid "Sub-Total"
+msgstr "Sub Total"
+
+#: store/templates/order_detail.html:51
+msgid "Total Paid"
+msgstr "Total Pagado"
+
+#: store/templates/order_detail.html:56
+msgid "Shipping Address"
+msgstr "Dirección de Embarque"
+
+#: store/templates/order_detail.html:64
+msgid "Payment Details"
+msgstr "Detalles del Pago"
+
+#: store/templates/order_detail.html:65
+msgid "The order"
+msgstr "La Orden"
+
+#: store/templates/order_detail.html:65
+msgid "has been paid successfully"
+msgstr "ha sido pagada de manera exitosa"
+
+#: store/templates/order_detail.html:71
+msgid "Print Order"
+msgstr "Imprimir la Orden"
+
+#: store/templates/orders_list.html:19
+msgid "Order Number"
+msgstr "Número de la Orden"
+
+#: store/templates/orders_list.html:20
+#, fuzzy
+#| msgid "Order History"
+msgid "Order Date"
+msgstr "Fecha de la Orden"
+
+#: store/templates/orders_list.html:21
+msgid "Total Amount"
+msgstr "Cantidad Total"
+
+#: store/templates/orders_list.html:22
+msgid "Status"
+msgstr "Estado"
+
+#: store/templates/orders_list.html:23
+msgid "Action"
+msgstr "Accción"
+
+#: store/templates/orders_list.html:32
+msgid "Complete"
+msgstr "Completa"
+
+#: store/templates/orders_list.html:33
+msgid "View Order"
+msgstr "Ver la Orden"
+
+#: store/templates/orders_list.html:39
+msgid "You have not placed any orders yet."
+msgstr "Usted no ha colocado ninguna orden todavía"
+
 #: store/templates/product.html:5
 #, fuzzy
 #| msgid "All Products"
 msgid "Product"
 msgstr "Celulares"
-
-#: store/templates/product.html:20
-msgid "Product Description"
-msgstr "Decripción del Producto"
 
 #: store/templates/product.html:23
 msgid "Out of Stock"
@@ -145,3 +269,70 @@ msgstr "Agregar al Carro"
 #: store/templates/product.html:37
 msgid "Reviews"
 msgstr "Revisiones"
+
+# msgid "Sign Up"
+# msgstr "Registrarse"
+#: store/templates/signin.html:5
+#, fuzzy
+#| msgid "Sign In"
+msgid "Sign in"
+msgstr "Entrar"
+
+#: store/templates/signin.html:12
+msgid "Login or Create a New Account"
+msgstr "Entre o Cree una Nueva Cuenta"
+
+#: store/templates/signin.html:18
+msgid "New Customer"
+msgstr "Cliente Nuevo"
+
+#: store/templates/signin.html:21
+msgid "When you create an account, you can see your orders history."
+msgstr "Cuando Ud. crea una cuenta, puede revisar las ordenes colocadas"
+
+#: store/templates/signin.html:23 store/templates/signup.html:6
+msgid "Create a New Account"
+msgstr "Cree una Nueva Cuenta"
+
+#: store/templates/signin.html:29
+msgid "Registered Customers Only"
+msgstr "Solamante Para Clientes Registrados"
+
+#: store/templates/signup.html:16
+msgid "Create a new account"
+msgstr "Cree una Nueva Cuenta"
+
+#: store/templates/signup.html:21
+msgid "Enter the following information to create a new account"
+msgstr "Ingrese la siguiente información para crear una cuenta"
+
+#: store/templates/signup.html:34
+msgid "Your account has been successfully created"
+msgstr "La cuenta ha sido creada exitosamente"
+
+#: store/templates/signup.html:39
+msgid "Dear Customer,"
+msgstr "Estimado Cliente,"
+
+#: store/templates/signup.html:42
+msgid "Your account has been created and it is ready to use."
+msgstr "La cuenta ha sido creada y está lista para ser usada"
+
+#: store/templates/signup.html:44
+msgid "and enjoy the variety of products that we have at the Z-Store."
+msgstr "y pueda disfrutar la variedad de productos de nuestra tienda"
+
+#: store/templates/thankyou.html:12
+msgid "Thanks for placing your order"
+msgstr "Gracias por colocar su orden"
+
+#: store/templates/thankyou.html:16
+msgid "Your order number is:"
+msgstr "El número de su orden es:"
+
+#: store/templates/thankyou.html:19
+msgid ""
+"We have received your order and will begin processing right away. An email "
+"confirmation has been sent to you. It contains details of the items you "
+"purchased."
+msgstr "Hemos recibido su orden y empezaremos a procesarla inmediatamente. Un correo de confirmación la ha sido enviado, conteniendo detalles de los artículos comprados"

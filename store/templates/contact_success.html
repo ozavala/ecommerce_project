@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load i18n %}
 {% load static %}
 {% block title %}
 Z-Store
@@ -9,12 +10,12 @@ Z-Store
     <br>
     <br>
     <h1 class="text-center product_title">
-      Thanks for contacting us!
+      {% trans "Thanks for contacting us!" %}"
     </h1>
     <br>
 
     <p>
-      Your message has been successfully sent to the store owner
+      {% trans "Your message has been successfully sent to the store owner" %}
     </p>
   </div>
 {% endblock %}

@@ -1,25 +1,26 @@
 {% extends 'base.html' %}
+{% load i18n %}
 {% load static %}
 {% block title %}
-Order History
+{% trans "Order History" %}
 {% endblock %}
 
 {% block content %}
   <div class="text-center">
     <br>
     <h1 class="text-center product_title">
-      Order History
+      {% trans "Order History" %}
     </h1>
     <br>
     {% if order_details %}
       <table class="table table-striped">
         <thead>
           <tr>
-            <th>Order Number</th>
-            <th>Order Date</th>
-            <th>Total Amount</th>
-            <th>Status</th>
-            <th>Action</th>
+            <th>{% trans "Order Number" %}</th>
+            <th>{% trans "Order Date" %}</th>
+            <th>{% trans "Total Amount" %}</th>
+            <th>{% trans "Status" %}</th>
+            <th>{% trans "Action" %}</th>
           </tr>
         </thead>
         <tbody>
@@ -28,16 +29,16 @@ Order History
               <td>{{ order.id }}</td>
               <td>{{ order.created|date:"Y M d" }}</td>
               <td>{{ order.total }}</td>
-              <td><i class="fas fa-check"></i>&nbsp;Complete</td>
-              <td><a href="{%url 'order_detail' order.id %}">View Order</a></td>
+              <td><i class="fas fa-check"></i>&nbsp;{% trans "Complete" %}</td>
+              <td><a href="{%url 'order_detail' order.id %}">{% trans "View Order"%}</a></td>
             </tr>
           {% endfor %}
         </tbody>
       </table>
     {% else %}
-      <p>You have not placed any orders yet.
+      <p>{% trans "You have not placed any orders yet." %}
         <br><br>
-        <a href="{% url 'home' %}" class="btn btn-secondary">Continue shopping</a>
+        <a href="{% url 'home' %}" class="btn btn-secondary">{% trans "Continue shopping" %}</a>
       </p>
     {% endif %}
   </div>

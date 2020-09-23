@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
+{% load i18n %}
 {% load static %}
 {% load widget_tweaks %}
 {% block title %}
-CONTACT
+{% trans "CONTACT" %}
 {% endblock %}
 
 {% block content %}
@@ -15,8 +16,8 @@ CONTACT
           <div class="card border rounded-0">
             <div class="card-header p-0">
               <div class="bg-dark text-white text-center py-2">
-                <h3>Contact</h3>
-                <p>We will gladly support you</p>
+                <h3>{% trans "Contact" %}</h3>
+                <p>{% trans "We will gladly support you" %} </p>
               </div>
             </div>
             <div class="card-body p-3">
