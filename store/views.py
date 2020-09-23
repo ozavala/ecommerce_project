@@ -11,6 +11,7 @@ from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator, EmptyPage, InvalidPage
 from django.template.loader import get_template
 from django.core.mail import EmailMessage
+from django.utils.translation import gettext as _  # new
 
 
 def home(request, category_slug=None):

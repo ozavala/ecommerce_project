@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
+{% load i18n %}
 {% load static %}
 
 {% block title%}
-Home
+{% trans "Home" %}
 {% endblock %}
 
 {% block content %}
@@ -16,7 +17,7 @@ Home
       <div class="row">
         <div class="col-10 mx-auto my-2 text-center">
           <h1 class="text-captitalze font-weight-bold">
-            All Products
+            {% trans "Cellular Phones" %}
           </h1>
         </div>
       </div>

@@ -1,0 +1,147 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-23 15:31-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: store/templates/cart.html:6
+msgid "Cart"
+msgstr "Carro"
+
+#: store/templates/cart.html:13
+msgid "your shopping cart is empty"
+msgstr "Su carro de compras se encuentra vacío"
+
+#: store/templates/cart.html:17
+msgid "Please click"
+msgstr "Por favor presione"
+
+#: store/templates/cart.html:17
+msgid "here"
+msgstr "aquí"
+
+#: store/templates/cart.html:17
+msgid "para continuar comprando"
+msgstr ""
+
+#: store/templates/cart.html:26
+msgid "Your  shopping cart"
+msgstr "Su carro de compras"
+
+#: store/templates/cart.html:34
+msgid "Your items"
+msgstr "Sus artículos"
+
+#: store/templates/cart.html:47
+msgid "SKU:"
+msgstr "SKU"
+
+#: store/templates/cart.html:49
+msgid "Unit Price: $"
+msgstr "Precio Unitario: $"
+
+#: store/templates/cart.html:51
+msgid "Qty:"
+msgstr "Cantidad"
+
+#: store/templates/cart.html:77
+msgid "Check Out"
+msgstr "Pagar"
+
+#: store/templates/cart.html:84
+msgid "Please review your cart items before proceeding with the payment."
+msgstr "Por favor revise los artículos del carro ante de proceder al pago"
+
+#: store/templates/cart.html:89
+msgid "Your total is: $"
+msgstr "El total es: $"
+
+#: store/templates/cart.html:112
+msgid "Continue shopping"
+msgstr "Continúe comprando"
+
+#: store/templates/home.html:6
+msgid "Home"
+msgstr "Inicio"
+
+#: store/templates/home.html:20
+msgid "Cellular Phones"
+msgstr "Teléfonos Celulares"
+
+#: store/templates/navbar.html:10
+msgid "Categories"
+msgstr "Categorías"
+
+#: store/templates/navbar.html:12
+msgid "All Products"
+msgstr "Celulares"
+
+#: store/templates/navbar.html:20
+msgid "Contact"
+msgstr "Contacto"
+
+#: store/templates/navbar.html:21
+msgid "About"
+msgstr "Acerca"
+
+#: store/templates/navbar.html:25
+msgid "Welcome,"
+msgstr "Bienvenido,"
+
+#: store/templates/navbar.html:28
+msgid "Order History"
+msgstr "Historia de Ordenes"
+
+#: store/templates/navbar.html:34
+msgid "Sign Out"
+msgstr "Salir"
+
+#: store/templates/navbar.html:40
+msgid "Sign Up"
+msgstr "Registrarse"
+
+# msgid "Sign Up"
+# msgstr "Registrarse"
+#: store/templates/navbar.html:45
+msgid "Sign In"
+msgstr "Entrar"
+
+#: store/templates/navbar.html:62
+msgid "Search"
+msgstr "Búsqueda"
+
+#: store/templates/product.html:5
+#, fuzzy
+#| msgid "All Products"
+msgid "Product"
+msgstr "Celulares"
+
+#: store/templates/product.html:20
+msgid "Product Description"
+msgstr "Decripción del Producto"
+
+#: store/templates/product.html:23
+msgid "Out of Stock"
+msgstr "No hay Stock"
+
+#: store/templates/product.html:27
+msgid "Add to Cart"
+msgstr "Agregar al Carro"
+
+#: store/templates/product.html:37
+msgid "Reviews"
+msgstr "Revisiones"

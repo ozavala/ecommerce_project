@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
+{% load i18n %}
 {% load static %}
 {% block title %}
-Product
+{% trans "Product" %} 
 {% endblock %}
 
 {% block content %}
@@ -16,14 +17,14 @@ Product
         <h5 class="text-info font-italic mb-3">
           <span class="mr-1">$</span> {{product.price}}
         </h5>
-        <p class="product_description">Product Description</p>
+        <p class="product_description">{% trans "Product Description" %}</p>
         <p class="text-justify product_text">{{product.description}}</p>
         {% if product.stock <= 0 %}
-        <p class="text-justify product_text"><b>Out of Stock</b></p>
+        <p class="text-justify product_text"><b>{% trans "Out of Stock" %}</b></p>
         {% else %}
         <a href="{% url 'add_cart' product.id %}">
           <button type="button" name="button" class="btn btn-secondary">
-            Add to Cart
+           {% trans "Add to Cart" %}
           </button>
           </a>
         {% endif %}
@@ -33,7 +34,7 @@ Product
 
   <div class="card">
   <div class="card-header">
-    <h4>Reviews</h4>
+    <h4> {% trans "Reviews"%}</h4>
   </div>
   {% if user.is_authenticated %}
   

@@ -1,19 +1,20 @@
 {% extends 'base.html' %}
+{% load i18n %}
 {% load static %}
 
 {% block title%}
-Cart
+{% trans "Cart" %}%
 {% endblock %}
 {% block content %}
   {% if not cart_items %}
   <div class="text-center">
     <br>
     <h1 class="text-center product_title">
-      your shopping cart is empty
+      {% trans "your shopping cart is empty" %}
     </h1>
     <br>
     <p class="text-center">
-      Please click <a href="{% url 'home' %}">here</a> to continue shopping
+      {% trans "Please click" %}% <a href="{% url 'home' %}">{% trans "here" %} </a> {% trans "to continue shopping" %}%
     </p>
   </div>
 
@@ -22,7 +23,7 @@ Cart
 <div class="text-center">
 <br>
     <div class='text-center product_title'>
-        Your  shopping cart
+        {% trans "Your  shopping cart" %}
     </div>
     <div class= 'row mx-auto'>
         <div class='col-12 col-sm-12 col-md-12 col-lg-6 text-center'>
@@ -30,7 +31,7 @@ Cart
                 <thead class="table_thead">
                     <tr>
                         <th colspan="4">
-                            Your items
+                            {% trans "Your items" %}
                         </th>
                     </tr>
                 </thead>
@@ -43,11 +44,11 @@ Cart
                     <td class='text-left'>
                         {{cart_item.product.name}}
                     <br>
-                      SKU: {{cart_item.product.id}}
+                      {% trans "SKU:" %} {{cart_item.product.id}}
                     <br>
-                        Unit Price: ${{ cart_item.product.price}}
+                        {% trans "Unit Price: $" %}{{ cart_item.product.price}}
                     <br>
-                        Qty: {{ cart_item.quantity}} x {{ cart_item.product.price}}
+                        {% trans "Qty:" %} {{ cart_item.quantity}} x {{ cart_item.product.price}}
                     </td>
                     <td>
                         ${{ cart_item.sub_total}}
@@ -73,19 +74,19 @@ Cart
                 <thead class="cart_thead">
                     <tr>
                         <th >
-                            Check out
+                            {% trans "Check Out" %}
                         </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>
-                            Please review your cart items before proceeding with the payment.
+                           {% trans "Please review your cart items before proceeding with the payment." %} 
                         <td>
                     </tr>
                     <tr>
                         <td class= "text-left">
-                            Your total is: <strong>${{total}}</strong>
+                             <strong>{% trans "Your total is: $" %}{{total}}</strong>
                         </td>
                     </tr>
                 </tbody>
@@ -108,7 +109,7 @@ Cart
             </form>
                 <a href="{% url 'home' %}" style="text-decoration: none;">
                     <button type="button" class="btn btn-lg btn-block bg-dark text-white">
-                        Continue shopping
+                        {% trans "Continue shopping" %}
                     </button>
                 </a>
             </div>
