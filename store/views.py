@@ -4,7 +4,7 @@ from django.core.exceptions import ObjectDoesNotExist
 from django.conf import settings
 import stripe
 from django.contrib.auth.models import Group, User
-from .forms import SignUpForm
+from .forms import SignUpForm, ContactForm
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.decorators import login_required
@@ -269,6 +269,7 @@ def sendEmail(order_id):
         msg.send()
     except IOError as e:
         return e
+"""
 
 
 def contact(request):
@@ -289,13 +290,13 @@ def contact(request):
                 to=['contact@zero2launch.io'],
                 from_email=from_email
             )
-
-            msg.send()
-
+    # ****!important***
+    # remove comment following line whem mail send is implemented
+            # msg.send()
+    # ******************
             return render(request, 'contact_success.html')
 
     else:
         form = ContactForm()
 
     return render(request, 'contact.html', {'form': form})
-"""
