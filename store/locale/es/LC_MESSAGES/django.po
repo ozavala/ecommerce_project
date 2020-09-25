@@ -172,7 +172,7 @@ msgstr "Completa"
 
 #: store/templates/order_detail.html:24
 msgid "Billing Address:"
-msgstr "Dirr¿ección de Cobro"
+msgstr "Dirección de Cobro"
 
 #: store/templates/order_detail.html:33 store/templates/product.html:20
 msgid "Product Description"

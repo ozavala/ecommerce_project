@@ -9,10 +9,12 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
+#import django_heroku
 import os
 from pathlib import Path
 from dotenv import load_dotenv
 load_dotenv()
+
 
 """
 from django.core.management import utils
@@ -35,8 +37,24 @@ SECRET_KEY = os.environ['KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', 'ingeconsersa.com']
 
+# Set this to True to avoid transmitting the CSRF cookie over HTTP accidentally.
+
+CSRF_COOKIE_SECURE = True
+
+SESSION_COOKIE_SECURE = True
+
+
+"""
+SECURE_SSL_REDIRECT = True
+
+SECURE_HSTS_SECONDS = 1
+
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+
+SECURE_HSTS_PRELOAD = True
+"""
 
 # Application definition
 
@@ -94,8 +112,11 @@ WSGI_APPLICATION = 'ecommerce_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'serevende',
+        'USER': os.environ['USER_DB'],
+        'PASSWORD': os.environ['PWD_DB'],
+        'HOST': 'localhost',
     }
 }
 
@@ -149,3 +170,10 @@ STRIPE_PUBLISHABLE_KEY = os.environ['STRIPE_PUBLISHABLE_KEY']
 STRIPE_SECRET_KEY = os.environ['STRIPE_SECRET_KEY']
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+"""
+# Configure Django App for Heroku.
+django_heroku.settings(locals())
+
+TEST_RUNNER = 'django_heroku.HerokuDiscoverRunner'
+"""
